@@ -2,7 +2,7 @@
 export GOOGLE_CLOUD_PROJECT="agent-project-459312"
 
 # Set your desired Google Cloud Location
-export GOOGLE_CLOUD_LOCATION="europe-west1" # Example location
+export GOOGLE_CLOUD_LOCATION="us-central1" # Example location
 
 # Set the path to your agent code directory
 export AGENT_PATH="adk_short_bot"

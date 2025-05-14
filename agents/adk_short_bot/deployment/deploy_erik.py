@@ -30,15 +30,15 @@ app = AdkApp(
     enable_tracing=True,
 )
 
-AGENT_WHL_FILENAME = "/adk_short_bot-0.1-py3-none-any.whl"
-AGENT_WHL_FILE = os.path.join("deployment", AGENT_WHL_FILENAME)
+AGENT_WHL_FILENAME = "adk_short_bot-0.1-py3-none-any.whl"
+AGENT_WHL_FILE = os.path.join("..", "dist", AGENT_WHL_FILENAME)
 
 
 print("Deploying agent to agent engine...")
 remote_app = agent_engines.create(
     app,
     requirements=[
-        AGENT_WHL_FILE,
+        "google-cloud-aiplatform[adk,agent_engines]",
     ],
     extra_packages=[
         AGENT_WHL_FILE,
