@@ -18,13 +18,13 @@ export SERVICE_NAME="short-bot-service"
 export APP_NAME="adk_short_bot"
 
 # update service account permission 
-gcloud projects add-iam-policy-binding agent-project-459312 \
-    --member=serviceAccount:691081085814-compute@developer.gserviceaccount.com \
-    --role=roles/storage.objectViewer
+gcloud projects add-iam-policy-binding genai-433808 \
+    --member=serviceAccount:916004278397-compute@developer.gserviceaccount.com \
+    --role=roles/storage.objectViewer>
 
     # Grant the required role (replace [PROJECT_NUMBER] with the number):
 gcloud projects add-iam-policy-binding $GOOGLE_CLOUD_PROJECT \
-  --member="serviceAccount:691081085814@cloudbuild.gserviceaccount.com" \
+  --member="serviceAccount:916004278397@cloudbuild.gserviceaccount.com" \
   --role="roles/iam.serviceAccountUser"
 
 # Deploy to cloud run
